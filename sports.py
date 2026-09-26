@@ -1,0 +1,59 @@
+class Cricket:
+    def __init__(self, player,score):
+        self.player = player
+        self.score = score
+
+    def info(self):
+        print(f"Cricket - Player: {self.player}, Score:
+               {self.score}")
+
+             def play(self):
+             output
+             print(f"{self.player} hits a six! ")
+
+             def get_score(self,new_score):
+
+              if new_score >= 0:
+                  self.score += new_score
+                  print(f"score updated to {self.__score}")
+
+             else:
+              print("score cannot be negative") 
+
+class Football:
+     def__init__(self, player, score):
+     self.__player = player
+     self.__score  = score
+
+     def info(self):
+         print(f"{self.__player}scores a goal")
+
+          def play(self):
+                      print(f"{self.player} scores a goal ")
+         
+                      def get_score(self,new_score):
+         
+                       if new_score >= 0:
+                           self.score += new_score
+                           print(f"score updated to {self.__score}")
+         
+                      else:
+                       print("score cannot be negative") 
+
+
+                       cricket  = Cricket("Rohit",  85)
+                       football = Football("Arjun", 2)
+
+                       print("=== sports scoreboard ===\n")
+                       for sport in (cricket,football):
+                           sport.info()
+                           sport.play()   
+                           print()
+
+                           print("--- direct change attempt ---")
+                           cricket.__score = 999
+                           print(f"get_score() still shows: {cricket.get_score()}")
+
+                           print("\n---updating score ---")
+                           cricket.set_score(100)
+                           football.set_score(3)
