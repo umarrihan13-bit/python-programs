@@ -1,0 +1,35 @@
+file = open("shopping_list.txt", "w")
+file.write("1. Spinach-200g\n")
+file.write("2. coconut-3\n")
+file.write("3. Flour-10kg\n")
+file.write("4. eggs-30\n")
+file.write("5. tomato-2kg\n")
+file.write("6. onion-5kg\n")
+file.write("7. garlic-200g\n")
+file.write("8. ginger-200g\n")
+
+file.close()
+print("shopping list saved to shopping-list.txt!")
+
+file = open("shopping_list.txt", "r")
+content = file.read()
+print("\n=== My shopping List ===")
+print(content)
+file.close()
+
+
+file = open("shopping_list.txt", "r")
+lines = file.readlines()
+print(f"you have {len(lines)} items in your  list.")
+file.close()
+
+file = open("shopping_list.txt", "a")
+file.write("4. yogurt-200g\n")
+file.write("5. potato-5kg\n") 
+file.close()
+print("\n2 more items added ")
+
+file = open("shopping_list.txt", "r")
+print("\n=== My Updated Shopping List ===")
+print(file.read())
+file.close()
